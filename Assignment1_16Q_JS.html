@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment1_JS</title>
+        <h>********************* Assignment 1 continue **********************</h><br>
+        <p>Question 16 in Assignment 1</p><br>
+        <script>
+            const th = parseInt(prompt("Enter the number of columns"));
+            const td = parseInt(prompt("Enter the number of rows"));
+        </script>
+        <style>
+            td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+        </style>
+        <table>
+            <caption>Alien football stars</caption>
+            <tr>
+                <th scope="col">Player</th>
+                <th scope="col">Gloobles</th>
+                <th scope="col">Za'taak</th>
+            </tr>
+            <tr>
+                <th scope="row">TR-7</th>
+                <td>7</td>
+                <td>4,569</td>
+            </tr>
+            <tr>
+                <th scope="row">Khiresh Odo</th>
+                <td>7</td>
+                <td>7,223</td>
+            </tr>
+            <tr>
+                <th scope="row">Mia Oolong</th>
+                <td>9</td>
+                <td>6,219</td>
+            </tr>
+        </table>
+    </head>
+</html>

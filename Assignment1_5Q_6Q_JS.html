@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h>********************* Assignment 1 continue **********************</h><br>
+        <p>Question 5 in Assignment 1</p><br>
+        <script>
+            var counter=0;
+            var myDate = new Date();
+            var year= myDate.getFullYear();
+            function leapyear(){
+                while(counter<20){
+                    if((year % 4 ===0)&&(!((year%100==0)&&(year%400==0)))){
+                    console.log(year+" ");
+                    document.write(year+"<br> ");
+                    year++;
+                    counter++
+                }else{
+                    year++;
+                }
+            }
+        }
+        leapyear();
+        </script>
+        --------------------------------------------------
+    </head>
+    <body>
+        <br><p>Question 6 in Assignment 1</p><br>
+        <script>
+            function printFrame(arr) {
+        function fill (str, length, char) {
+            return (str.length < length) ? fill(str + char, length, char) : str;
+        }
+
+        let size = arr.map((str) => {
+                return str.length;
+    })
+    .reduce((a, b) => {
+            return Math.max(a, b);
+    });
+
+        let line = fill('', size + 4, '*');
+
+        arr = arr.map((element) => {
+                return '* '+ fill(element, size, ' ') + ' *';
+    })
+        arr.unshift(line);
+        arr.push(line);
+
+        return arr.join('\n');;
+    }
+
+    console.log(printFrame(["Hello", "World", "in", "a", "frame"]));
+            
+        </script>
+    </body>
+</html>

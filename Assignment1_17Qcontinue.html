@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment1_JS</title>
+        <h>********************* Assignment 1 continue **********************</h><br>
+        <p>Question 17 in Assignment 1</p><br>
+        <script>
+             function leftRotate(arr , d , n) {
+        for (i = 0; i < d; i++)
+            leftRotatebyOne(arr, n);
+    }
+ 
+    function leftRotatebyOne(arr , n) {
+        var i, temp;
+        temp = arr[0];
+        for (i = 0; i < n - 1; i++)
+            arr[i] = arr[i + 1];
+        arr[n - 1] = temp;
+    }
+     function printArray(arr , n) {
+        for (i = 0; i < n; i++)
+            document.write(arr[i] + " ");
+    }
+     var arr = [ 1, 2, 3, 4, 5, 6, 7 ];
+        leftRotate(arr, 2, 7);
+        printArray(arr, 7);
+ 
+        </script>
+    </head>
+    <body>
+        <br>
+        <p>Question 18 in Assignment 1</p><br>
+        <form name="form">
+            <p>English word/sentence:</p> <input type="text" id="english" required="required" size="80" /> <br />
+            <input type="button" value="Translate!" onClick="translation()" />
+            <p>Pig Latin translation:</p> <textarea name="piglat" rows="10" cols="60"></textarea>
+            </form>
+            
+            <script type="text/javascript">
+            <!--
+            fucntion translation() { 
+            var delimiter = " ";
+                input = document.form.english.value;
+                tokens = input.split(delimiter);
+                output = [];
+                len = tokens.length;
+                i;
+            
+            for (i = 1; i<len; i++){
+                output.push(input[i]);
+            }
+            output.push(tokens[0]);
+            output = output.join(delimiter);
+            }
+            //-->
+            </script>
+            
+    </body>
+</html>
