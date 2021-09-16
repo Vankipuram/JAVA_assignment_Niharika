@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ASSIGNMENT_2_JS</title>
+        <h1>Functional Programming : Basic Exercise</h1><br>
+        <p>---------------------------------------Question 1 in Assignment 2------------------------------------ </p><br>
+        <script>
+            function f1(x){
+              
+               return x*x;
+            }
+            function f2(y){
+                
+                return y*2;
+            }
+            var result1 = f1(3);
+            var result2 = f2(5);
+            document.write("The function 1 result is : "+ result1); 
+            document.write("<br>");
+            document.write("The function 2 result is :"+result2);
+            function composedValue( f1, f2,value){
+                
+                return f1*f2*value;
+            }
+            var value = 5;
+            var finalResult = composedValue(9,10,5);
+            document.write("<br>");
+            document.write("The final composed value is : "+finalResult);
+     </script>
+        </head>
+        <body>
+            <br><p>---------------------------------Question 3 in Assignment 2--------------------------------</p><br>
+            <script>
+               function find(value, array) {
+                    return array.some(e => e === value);
+                         }
+
+                   const marks = [4, 5, 7, 9, 10, 2];
+                      
+                      console.log(find(4, marks));
+                      console.log(find(11, marks));
+                    document.write(find(4, marks));
+                    document.write("<br>");
+                    document.write(find(11, marks));
+            </script>
+            <br><p>-------------------------------Question 4 in Assignment 2--------------------------</p><br>
+            <p id="demo"></p>
+            <script>
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                      fruits.push("Kiwi","Lemon", "Pineapple","Dragon_Fruit","Guava","CustardApple");
+                  document.getElementById("demo" ).innerHTML = fruits;
+            </script>
+        </body>
+</html>
