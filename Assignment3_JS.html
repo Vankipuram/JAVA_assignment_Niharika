@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ASSIGNMENT_3_JS</title>
+        <h1>Functional Programming : Basic Exercise</h1><br>
+        <p>---------------------------------------Question 1 in Assignment 3------------------------------------ </p><br>
+        <script>
+            class Rectangle {
+               constructor(height, width) {
+                         this.height = height;
+                            this.width = width;
+                             }
+                      }
+
+                   const obj = new Rectangle(3, 5);
+                obj.height; // 3
+                obj.width; // 5
+
+
+                obj instanceof Rectangle; 
+                ({}) instanceof Rectangle; 
+
+        </script>
+        <body>
+            <br>
+        <p>---------------------------------------Question 2 in Assignment 3------------------------------------ </p><br>
+        <script>
+            class Rectangle {
+                  constructor(height, width) {
+                   this.height = height;
+                   this.width = width;
+             }
+
+ 
+        area() {
+            return this.width * this.height;
+             }
+         }
+
+          const obj = new Rectangle(3, 5);
+           obj.area(); // 15
+           document.write("The area of the rectangle : " +obj.area);
+        </script>
+        <br>
+        <p>---------------------------------------Question 4 in Assignment 3------------------------------------ </p><br>
+        <script>
+            function addFullNameProperty(obj) {
+ 
+                       Object.defineProperty(obj, 'fullName', {
+                                   get:  function(){
+                                       return this.firstName + ' ' + this.lastName;
+                                    }, 
+                               configurable:false
+                               });
+                           }
+
+                        var person = {
+                          firstName: 'Jade',
+                           lastName: 'Smith'
+                          };
+
+                       addFullNameProperty(person);
+
+                 console.log(person.fullName); // --> 'Jade Smith'
+
+                person.lastName = "Mike";
+
+                    console.log(person.fullName); // --> 'Jade Mike'
+                    document.write(person.fullName);
+        </script>
+        <br>
+        <p>---------------------------------------Question 6 in Assignment 3------------------------------------ </p><br>
+        <p id="demo"></p>
+       <script>
+            const person1 = {};
+             person1['firstname'] = 'Mario';
+              person1['lastname'] = 'Rossi';
+
+               console.log(person1.firstname);
+               const realObj = eval ("(" + person1 + ")");
+               document.getElementById("demo").innerHTML =
+                  realObj.person1[0].firstName + " " +  realObj.person1[0].lastName;
+               console.log(realObj);
+
+         </script>
+           <br><p>---------------------Question 7 in Assignmnet 3</p><br>
+           <h1>JSON parse()</h1>
+
+                   <p>JSON.parse() parses a string, written in JSON format, and returns a JavaScript object.</p>
+
+                 <p>The value of "firstName" is:</p>
+
+              <p id="demo"></p>
+
+                   <script>
+              var obj = JSON.parse('{"firstName":"John", "lastName":"Doe"}');
+
+                 document.getElementById("demo").innerHTML = obj.firstName;
+              </script>
+    </body>
+    </head>
+</html>
