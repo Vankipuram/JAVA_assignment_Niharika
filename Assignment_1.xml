@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id = "obj" class="Spring.Assignment_1.Address"> 
+   <property name="street" value="Gandhi Nagar"></property>
+   <property name="city" value="Banglore"></property>
+   <property name="state" value="Karnataka"></property>
+   <property name="zip" value="123456"></property>
+   <property name="country" value="India"></property>
+   </bean>
+   
+   <bean id="cust" class="Spring.Assignment_1.Customer">
+   <property name="customerId" value="3456877"></property>
+   <property name="customerName" value="John"></property>
+   <property name="customerContact" value="917831718"></property>
+   <property name="customerAddress" ref="obj"></property>
+   </bean>
+   
+   
+   <bean id="cust1" class = "Spring.Assignment_1.Address">
+   <constructor-arg index="0" value="Nehru Nagar" type="String"></constructor-arg>
+   <constructor-arg index="1" value="Hyderabad" type="String"></constructor-arg>
+   <constructor-arg index="2" value="Telangana" type="String"></constructor-arg>
+   <constructor-arg index="3" value="5747675" type="int"></constructor-arg>
+   <constructor-arg index="4" value="India" type="String"></constructor-arg>
+   </bean>
+   
+   <bean id="cust2" class="Spring.Assignment_1.Customer">
+   <constructor-arg index="0" value="564787" type="int"></constructor-arg>
+   <constructor-arg index="1" value="Charles" type="String"></constructor-arg>
+   <constructor-arg index="2" value="9876543210" type="String"></constructor-arg>
+   <constructor-arg index="3" ref="constructor1"></constructor-arg>
+   </bean>
+   
+
+</beans>
