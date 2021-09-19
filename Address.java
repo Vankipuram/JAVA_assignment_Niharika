@@ -1,52 +1,40 @@
-package Spring.Assignment_1;
+package Spring_Assignment_5_Inject;
 
 public class Address {
-	private String street;
-	private String city;
-	private String state;
-	private int zip;
-	private String country;
-	
-	public Address(String street, String city, String state, int zip, String country) {
-		super();
-		this.street = street;
-		this.city = city;
-		this.state = state;
-		this.zip = zip;
-		this.country = country;
-	}
-	public String getStreet() {
-		return street;
-	}
-	public void setStreet(String street) {
-		this.street = street;
-	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getState() {
-		return state;
-	}
-	public void setState(String state) {
-		this.state = state;
-	}
-	public int getZip() {
-		return zip;
-	}
-	public void setZip(int zip) {
-		this.zip = zip;
-	}
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	public String display() {
-		return "[Street : "+ street +" City : "+city+"State : "+state+" Zip : "+zip+" Country : "+country+"]";
-	}
+
+	 private String name;
+	 private int age;
+
+	 @Inject
+	 private Address address;
+
+	 public void Employee() {
+
+	 }
+
+	 public String getName() {
+	  return name;
+	 }
+
+	 public void setName(String name) {
+	  this.name = name;
+	 }
+
+	 public int getAge() {
+	  return age;
+	 }
+
+	 public void setAge(int age) {
+	  this.age = age;
+	 }
+
+	 public Address getAddress() {
+	  return address;
+	 }
+
+	 public void setAddress(Address address) {
+	  this.address = address;
+	  }
+	 
 
 }
