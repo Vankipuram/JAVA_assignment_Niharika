@@ -1,4 +1,4 @@
-package Spring_Assignment_5_Required;
+package Spring_Assignment_5_Resource;
 
 import org.springframework.stereotype.Component;
 
